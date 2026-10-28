@@ -1,23 +1,41 @@
-# 📊 Organizador de Extrato Bancário com IA
+# Organizador de Extrato Bancário com IA
 
-O objetivo é extrair dados de extratos bancários utilizando Inteligência Artificial. Sem a necessidade de criar uma estrutura rígida de código para capturar os dados ou fazer tratamentos complexos de extração: a IA lê o texto bruto e estrutura os dados, deixando apenas o tratamento básico de colunas e limpeza a cargo do Pandas.
+O objetivo é extrair dados de extratos bancários utilizando Inteligência Artificial. Sem a necessidade de criar uma estrutura rígida de código para capturar os dados ou fazer tratamentos complexos para a extração. A IA lê o texto bruto e estrutura os dados, deixando apenas o tratamento básico de colunas e limpeza com o Pandas.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* [Python](https://www.python.org/)
-* [Streamlit](https://streamlit.io/) (Interface gráfica)
-* [Google GenAI SDK](https://pypi.org/package/google-genai) (Modelo Gemini Flash Lite)
-* [pdfplumber](https://github.com/jsvine/pdfplumber) (Extração de texto de PDFs)
-* [Pandas](https://pandas.pydata.org/) (Manipulação e estruturação de dados)
+- [Python](https://www.python.org/)
+- [Streamlit](https://streamlit.io/) 
+- [Google GenAI SDK](https://pypi.org/package/google-genai) 
+- [pdfplumber](https://github.com/jsvine/pdfplumber) 
+- [Pandas](https://pandas.pydata.org/)
 
 ---
 
-## 📋 User Stories
+## 🚀 Como Rodar 
 
-| Prioridade | User Story |
-| --- | --- |
-| **Alta** | Como desenvolvedor, quero extrair as informações do extrato utilizando IA, para que eu não precise criar regras complexas ou tratamentos pesados de extração na arquitetura do software. |
-| **Alta** | Como usuário, quero ver todas as minhas transações detalhadas (separadas por data, estabelecimento, valor e categoria), para que eu possa acompanhar meus gastos de forma clara. |
-| **Média** | Como usuário, quero visualizar uma tabela com o total de gastos por categoria junto com o total geral, para que eu possa identificar facilmente onde estou gastando mais. |
+1. Criar o ambiente virtual
+```bash
+python3 -m venv venv
+```
+2. Ativar o ambiente virtual
+```bash
+
+
+source venv/bin/activate
+```
+3. Instalar as dependências
+```Bash
+
+pip install streamlit pdfplumber google-genai pandas python-dotenv
+```
+4. Configurar .env
+```
+API_GEMINI=sua_chave_aqui
+```
+5. Executar a Aplicação
+```Bash
+streamlit run app.py
+```
